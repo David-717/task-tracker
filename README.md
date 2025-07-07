@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+# Task-Tracker
+>>>>>>> ff6c0b405fc12997974fbc5b73314c511becd690
 # Personal Task Tracker
 
 ## 📖 Description
