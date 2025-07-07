@@ -1,3 +1,5 @@
+"use client"
+
 import { useState, useEffect } from "react"
 import Login from "@/components/Login"
 import TaskDashboard from "@/components/TaskDashboard"
