@@ -1,15 +1,25 @@
-
+/* Dark mode styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Dark mode configuration */
 .dark {
   color-scheme: dark;
 }
+
+/* ===== ADVANCED TRANSITIONS & EFFECTS ===== */
+
+/* Global smooth transitions */
 * {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
 }
+
+/* ===== ADVANCED ANIMATIONS ===== */
+
+/* Fade in with slide up */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -21,6 +31,7 @@
   }
 }
 
+/* Fade in with slide down */
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -31,6 +42,8 @@
     transform: translateY(0);
   }
 }
+
+/* Fade in with slide left */
 @keyframes fadeInLeft {
   from {
     opacity: 0;
@@ -41,6 +54,8 @@
     transform: translateX(0);
   }
 }
+
+/* Fade in with slide right */
 @keyframes fadeInRight {
   from {
     opacity: 0;
@@ -52,6 +67,7 @@
   }
 }
 
+/* Scale in animation */
 @keyframes scaleIn {
   from {
     opacity: 0;
@@ -63,6 +79,7 @@
   }
 }
 
+/* Bounce in animation */
 @keyframes bounceIn {
   0% {
     opacity: 0;
@@ -81,6 +98,7 @@
   }
 }
 
+/* Pulse animation */
 @keyframes pulse {
   0%,
   100% {
@@ -91,6 +109,7 @@
   }
 }
 
+/* Shake animation for errors */
 @keyframes shake {
   0%,
   100% {
@@ -111,6 +130,7 @@
   }
 }
 
+/* Glow effect */
 @keyframes glow {
   0%,
   100% {
@@ -121,6 +141,7 @@
   }
 }
 
+/* Gradient animation */
 @keyframes gradientShift {
   0% {
     background-position: 0% 50%;
@@ -133,7 +154,7 @@
   }
 }
 
-
+/* ===== UTILITY CLASSES ===== */
 
 .animate-fadeInUp {
   animation: fadeInUp 0.6s ease-out;
@@ -177,6 +198,9 @@
   animation: gradientShift 4s ease infinite;
 }
 
+/* ===== HOVER EFFECTS ===== */
+
+/* Lift effect */
 .hover-lift {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -186,6 +210,7 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
+/* Scale effect */
 .hover-scale {
   transition: transform 0.3s ease;
 }
@@ -194,6 +219,7 @@
   transform: scale(1.05);
 }
 
+/* Glow on hover */
 .hover-glow {
   transition: box-shadow 0.3s ease;
 }
@@ -202,6 +228,9 @@
   box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
 }
 
+/* ===== LOADING EFFECTS ===== */
+
+/* Spinner variations */
 @keyframes spin-slow {
   from {
     transform: rotate(0deg);
@@ -215,6 +244,9 @@
   animation: spin-slow 3s linear infinite;
 }
 
+/* ===== ADVANCED BUTTON EFFECTS ===== */
+
+/* Ripple effect */
 .btn-ripple {
   position: relative;
   overflow: hidden;
@@ -237,10 +269,16 @@
   width: 300px;
   height: 300px;
 }
+
+/* ===== MODAL EFFECTS ===== */
+
+/* Modal backdrop blur */
 .modal-backdrop {
   backdrop-filter: blur(5px);
   transition: backdrop-filter 0.3s ease;
 }
+
+/* Modal slide in */
 @keyframes modalSlideIn {
   from {
     opacity: 0;
@@ -256,6 +294,8 @@
   animation: modalSlideIn 0.3s ease-out;
 }
 
+/* ===== GLASSMORPHISM EFFECT ===== */
+
 .glass {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -263,11 +303,13 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
+/* Dark mode glass effect */
 .dark .glass {
   background: rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* ===== CUSTOM SCROLLBAR ===== */
 
 ::-webkit-scrollbar {
   width: 8px;
@@ -292,6 +334,8 @@
   background: linear-gradient(45deg, #764ba2, #667eea);
 }
 
+/* ===== UTILITY CLASSES FOR DELAYS ===== */
+
 .delay-100 {
   animation-delay: 0.1s;
 }
@@ -311,6 +355,9 @@
   animation-delay: 0.6s;
 }
 
+/* ===== RESPONSIVE ANIMATIONS ===== */
+
+/* Reduce motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -321,6 +368,7 @@
   }
 }
 
+/* Mobile optimized animations */
 @media (max-width: 768px) {
   .hover-lift:hover {
     transform: translateY(-2px);
