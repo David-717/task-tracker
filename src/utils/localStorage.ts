@@ -20,6 +20,7 @@ export const storeTasks = (tasks: Task[]): void => {
   localStorage.setItem(STORAGE_KEYS.TASKS, JSON.stringify(tasks))
 }
 
+// Normalize legacy tasks that don't have priority / categories / dueDate
 const normalizeTask = (task: any): Task => ({
   id: task.id,
   title: task.title,
